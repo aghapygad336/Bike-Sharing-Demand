@@ -21,14 +21,18 @@ results = []
 for data in csv_reader:
     if not headers:
         headers = []
+        print("^^^^^^^^&&&&&&&&&&&&&&&&&&7^^^^^")
         for i, col in enumerate(data):
+           print(col)
+
            if col in date_column:
             headers.append(i)
 
+
     else:
+
         results.append(([data[i] for i in headers]))
 
-        print("$$$$$$$$$$$$$")
 
 
 print("^^^^^^^^^^^^^")
@@ -37,3 +41,8 @@ now = datetime.now()
 timestamp = datetime.timestamp(now)
 print("timestamp =", timestamp)
 print(now)
+
+lengthOfResults= len(results)
+print(lengthOfResults)
+
+
